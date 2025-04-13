@@ -1,0 +1,443 @@
+﻿Ejercitación 1 - Responder el siguiente cuestionario 
+1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última? 
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos con HTML? 
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y obsoleto? 
+4. Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01? 
+5. Qué son los metadatos y cómo se especifican en HTML?
+
+
+1. El HTML es HyperText Markup Language, Lenguaje para el Formato de Documentos de Hipertexto.
+El HTML da a los autores las herramientas para:
+   * Publicar documentos en línea con encabezados, textos, tablas, listas, fotos, etc.
+   * Obtener información en línea a través de vínculos de hipertexto, haciendo clic con el botón de un ratón.
+   * Diseñar formularios para realizar transacciones con servicios remotos, para buscar información, hacer reservas, pedir productos, etc.
+   * Incluir hojas de cálculo, videoclips, sonidos, y otras aplicaciones directamente en sus documentos.
+        Fue creado en el 1991, y sus distintas versiones fueron:
+   * HTML 2.0 (1995)
+   * HTML 3.2 (1997)
+   * HTML 4.01 (1999)
+   * HTML 5 (2014) esta fue la última.
+   2. Los principios básicos que recomienda la W3C son los siguientes:
+   * Separar estructura y presentación
+   * Considerar la accesibilidad universal a la Web
+   * Ayudar a los agentes de usuario con la representación incremental
+   3. Un elemento o atributo se considera desaprobado en las especificaciones de HTML cuando todavía es reconocido por los navegadores, pero su uso ya no se recomienda porque existen alternativas más modernas y eficientes, como las hojas de estilo en cascada
+Un elemento o atributo se considera obsoleto cuando ya no debe usarse bajo ninguna circunstancia, incluso si algunos navegadores todavía lo reconocen. Su uso puede generar errores en la validación del código HTML, y los navegadores modernos pueden dejar de soportarlos completamente en cualquier momento.
+   4. El DTD (Document Type Definition) es una definición del tipo de documento que le indica al navegador cómo debe interpretar un archivo HTML. Especifica las reglas del lenguaje (HTML en este caso), definiendo qué elementos y atributos están permitidos, y cómo deben estructurarse.
+Hay 3 tipos de DTDs:
+      * Strict: Solo permite el uso de elementos y atributos definidos por el estándar, sin elementos obsoletos.
+Se usa cuando se desea un código limpio y moderno.
+      * Transitional: Permite elementos y atributos obsoletos (como <font>), para mantener compatibilidad con versiones anteriores.
+      * Frameset: Similar al transitional, pero además permite el uso de <frameset> para dividir la ventana del navegador en marcos.
+         5. Los metadatos son datos que describen otros datos. En HTML, proporcionan información sobre la página web, como el autor, palabras clave, descripción, codificación de caracteres, etc.
+Se especifican principalmente en el elemento <head> del documento, usando la etiqueta <meta>.
+Ejercitación 2
+2.a)
+<!-- Código controlado el día 12/08/2009 →
+        Se puede colocar en cualquier parte del codigo, esto establece un comentario, no es visible.
+        La etiqueta es <!-- →.
+2.b)
+<div id="bloque1">Contenido del bloque1</div>
+        Sección: En el <body>
+Efecto: Muestra un bloque con el texto “Contenido del bloque1”.
+Elemento: <div>
+Etiquetas: <div> (apertura), </div> (cierre)
+Atributo:id="bloque1"
+2.c)
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32"
+longdesc="detalles.htm" />
+        Sección: En el <body>, ya que es contenido visible.        
+ Efecto: Muestra una imagen de 32x32 píxeles (aunque no se carga porque src está vacío).
+        Elementos, etiquetas y atributos:
+         * Elemento: <img /> (elemento vacío)
+
+         * Atributos:
+
+            * src=""
+            * alt="lugar imagen"
+            * id="im1"
+            * name="im1" 
+            * width="32" / height="32"
+            * longdesc="detalles.htm"
+
+
+2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+Sección: En el <head>.
+         Efecto:
+            * Define metadatos sobre el documento (palabras clave y expiración). 
+Elementos y atributos:
+            * Elemento: <meta /> (elemento vacío)
+
+            * Atributos de la primera línea:
+
+               * name="keywords"
+
+               * lang="es"
+
+               * content="..."
+
+                  * Atributos de la segunda línea:
+
+                     * http-equiv="expires"
+
+                     * content="..." 
+
+
+2.e)
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+rel="help">Resumen HTML </a>
+Sección: En el <body>.
+        Efecto: Crea un hipervínculo al archivo indicado, con información adicional sobre el tipo, idioma, codificación y relación.
+        Elementos y atributos:
+                        * Elemento: <a>
+
+                        * Atributos:
+                           * href="..."
+                           * type="text/html"
+                           * hreflang="es"
+                           * charset="utf-8"
+                           * rel="help"
+
+
+2.f)
+<table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1o</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2o</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+Sección: En el <body>, ya que es contenido visible.
+        Efecto: Muestra una tabla con título y dos filas de datos vacíos.
+        Elementos, etiquetas y atributos:
+                           * Elementos:
+                           * <table>: tabla
+
+                           * <caption>: título de la tabla
+
+                           * <tr>: fila
+
+                           * <th>: encabezado
+
+                           * <td>: celda de datos
+
+                              * Atributos:
+
+                                 * width="200"
+
+                                 * summary="..."
+
+                                 * align="top" (en caption) 
+Ejercitacion 3
+3.a)
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a> Abre google en la misma pestaña que el menu principal
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a> Abre google en otra pestaña
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help"> No tiene texto visible por ende no se mostrara nada clickeable
+<a href="#">Click aquí para ir a Google</a> Lleva al inicio de la pagina actual
+<a href="#arriba">Click aquí para volver arriba</a>Al hacer clic, el navegador desplazará la página hasta la ubicación donde esté definido el marcador arriba
+<a name="arriba" id="arriba"></a> es el indicador de arriba.
+Los muestra a todos uno al lado del otro
+
+
+3.b)
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p> muestra una imagen al principio y apretando lo escrito Abre google en la misma pestaña que el menu principal
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p> Muestra una imagen que al hacer click te lleva a la pagina de google en otra pestaña
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="ima
+gen1" />Click aquí</a></p> Podes clickear tanto en la imagen como en el texto y te lleva a google, pero es en el mismo link por asi decirlo
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a
+href="http://www.google.com.ar">Click aquí</a></p> En cambio aca, haciendo click en la imagen o en el texto te abre google pero son independientes uno de otro.
+Estan uno abajo del otro
+
+
+<ul> es un listado no ordenado
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+
+
+<ol> Listado ordenado
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ol>
+
+
+<ol> Lista ordenada
+<li>xxx</li> Por default le otorga el numero 1 de la lista
+</ol>
+<ol>
+<li value="2">yyy</li> Lista ordenada, pero a traves de un atributo le otorga el valor 2
+</ol>
+<ol>
+<li
+value="3">zzz</li> Igual que el anterior pero aca
+</ol>
+
+
+<blockquote> Es la etiqueta que se utiliza para citar cosas en texto
+<p>1. xxx<br />Esto no es una lista, sino utiliza la etiqueta parrafo, y se separan por la etiqueta de salto de linea
+2. yyy<br />
+3. zzz</p>
+</blockquote>
+
+
+3.d)
+<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+Es una tabla con dos columnas y 3 filas
+
+
+<table border="1" width="300">
+<tr>
+<td><div align="center"><strong>Colum
+na1</strong></div></td>
+<td><div align="center"><strong>Columna
+2</strong></div></td>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+Es una tabla igual a la anterior, nada mas que la primer fila, lo que estan escrito en sus celdas estan alineados en el centro
+
+
+3.e)
+<table width="200">
+<caption>
+Título
+</caption>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">
+&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+Tabla sin marcos, las celdas estan pintadas de un color, utiliza la etiqueta caption que es para un titulo.
+
+
+<table width="200">
+        <tr>
+            <td colspan="3"><div
+                align="center">Título</div></td>
+                </tr>
+                <tr>
+                <td bgcolor="#dddddd">&nbsp;</td>
+                <td bgcolor="#dddddd">&nbsp;</td>
+                <td bgcolor="#dddddd">&nbsp;</td>
+                </tr>
+                <tr>
+                <td bgcolor="#dddddd">&nbsp;</td>
+                <td bgcolor="#dddddd">&nbsp;</td>
+                <td bgcolor="#dddddd">&nbsp;</td>
+                </tr>
+                </table>
+Tabla igual a la otra, nada mas que en titulo utiliza el atributo colspan que es para unir columnas.
+
+
+3.f)
+
+
+    <table width="200">
+        <tr>
+        <td colspan="3"><div
+        align="center">Título</div></td>
+        </tr>
+        <tr>
+        <td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+        <tr>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+        </table>
+        Tabla sin marco que une las filas de l la primer columna
+
+
+
+
+    <table width="200">
+        <tr>
+        <td colspan="3"><div
+        align="center">Título</div></td>
+        </tr>
+        <tr>
+        <td colspan="2"
+        bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+        <tr>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        <td bgcolor="#dddddd">&nbsp;</td>
+        </tr>
+        </table>
+        Tabla sin marco, que une las primeras dos columnas de la primer fila
+
+
+3.g)
+
+
+    <table width="200" border="1">
+        <tr>
+        <td colspan="3"><div
+        align="center">Título</div></td>
+        </tr>
+        <tr>
+        <td colspan="2"rowspan="2">&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+        <tr>
+        <td width="50%">&nbsp;</td>
+        </tr>
+        </table>
+        Tabla con marcos que une las primeras dos filas de la la primer columna
+
+
+
+
+    <table width="200" border="1" cellpadding="0"
+cellspacing="0">
+<tr>
+<td colspan="2"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table>
+Tabla con marcos rellenos que une las filas de la primer columna
+
+
+3.h)
+
+
+    <form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+        <fieldset>
+        <legend>LOGIN</legend>
+        Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+        Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+        </fieldset>
+        <input type="submit" id="boton1" name="boton1" value="Enviar" />
+        </form>
+        Formulario de login donde aparece la etiqueta imput que es un recuadro para escribir.
+        En la parte de clave, el input esta encriptado, para que no se pueda ver que se esta escribiendo
+Aparece en la anteultima linea un boton.
+
+
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form>
+Formulario sin encriptado de contraseña y sin recuadro que contenga los elementos.
+
+
+<form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="p
+ost" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu3" name="usu3" /><br />
+Clave: <input type="password" id="clave3" name="clave3" />
+</fieldset>
+<input type="reset" id="boton3" name="boton3" value=
+"Enviar" />
+</form>
+Formulario identico al primero, pero la diferencia esta en el boton, este lo que hace es resetear la pagina sin ningun valor.
+
+
+3.1)<label>Botón 1
+<button type="button" name="boton1" id="boton1">
+<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+<b>CLICK AQUÍ</b></button></label>
+Boton que contiene una imagen y tiene un texto que dice click aqui.
+
+
+<label>Botón 2
+<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label>
+Boton que no contiene imagen, solo muestra texto en su interior.
+
+
+3.j)
+<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p>
+Son labels de tipo radio, lo que hace es poder marcar cualquiera de las dos labels, no se pueden a la vez.
+
+
+<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p>
+En cambio estas labels si se pueden mantener seleccionadas a la vez.
+
+
+3.k)
+<select name="lista">
+<optgroup label="Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label="Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+Aca aparecen elementos como el optgroup que es una lista que se despliega para poder seleccionar y el elemento select que es el contenedor de la lista.
+
+
+<select name="lista[]" multiple="multiple">
+<optgroup label=" Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label=" Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select>
+Es lo mismo que el anterior, pero no es una lista desplegables, sino que es unscroll el que aparece

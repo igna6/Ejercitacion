@@ -1,0 +1,81 @@
+﻿Ejercitacion 1
+1. Estas son algunas de las ventajas principales del HTML5:
+
+
+* No requiere plugins externos para multimedia (audio, video).
+
+* Mejor semántica.
+
+* Soporte nativo para almacenamiento local (localStorage, sessionStorage).
+
+* Compatible con dispositivos móviles.
+
+* Mejora la accesibilidad y SEO (Search Engine Optimization).
+
+
+   2. Se deberia utilizar porque:
+   * Es el estándar actual para desarrollo web moderno.
+
+   * Ofrece mejor rendimiento en navegadores modernos.
+
+   * Facilita la creación de sitios responsivos y ricos en contenido multimedia.
+
+   * Mejora la experiencia de usuario.
+
+
+      3. Otras ventajas:
+      * Soporta gráficos y animaciones con <canvas> .
+
+      * Mejora la interoperabilidad entre dispositivos.
+
+      * Reduce la necesidad de JavaScript adicional para formularios.
+
+
+Ejercitacion 2
+2.a) Soporta MP3, WAV y OGG.
+
+
+2.b)<audio controls>
+  <source src="https://html5tutorial.info/media/vincent.mp3" type="audio/mpeg">
+</audio>
+
+
+Ejercitacion 3
+3.a)Video soporta MP4, WebM y OGG.
+
+
+3.b)<video width="320" height="240" controls>
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+</video>
+
+
+Ejercitacion 4
+4.a)<form>
+  <label>Nombre: <input type="text" required></label>
+  <button type="submit">Enviar</button>
+</form>
+
+
+4.b)<form>
+  <label>Email: <input type="email" required></label>
+  <button type="submit">Enviar</button>
+</form>
+
+
+4.c)<form>
+  <label>Fecha: <input type="date" required></label>
+  <button type="submit">Enviar</button>
+</form>
+
+
+4.d)<form>
+  <label>Color favorito: <input type="color" required></label>
+  <button type="submit">Enviar</button>
+</form>
+
+
+4.e)<form>
+  <label>Edad: <input type="number" min="18" max="100" required></label>
+  <button type="submit">Enviar</button>
+</form>
