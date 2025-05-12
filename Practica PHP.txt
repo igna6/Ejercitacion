@@ -1,0 +1,157 @@
+﻿1)
+<?php
+function doble($i) {
+ return $i*2;
+}
+$a = TRUE; 
+$b = "xyz";
+$c = 'xyz';
+$d = 12;
+echo gettype($a);
+echo gettype($b);
+echo gettype($c);
+echo gettype($d);
+if (is_int($d)) {
+ $d += 4;
+}
+if (is_string($a)) {
+ echo "Cadena: $a";
+}
+$d = $a ? ++$d : $d*3;
+$f = doble($d++);
+$g = $f += 10;
+echo $a, $b, $c, $d, $f , $g;
+?>
+
+
+Las variables:
+
+
+$a = TRUE; Es un booleano
+
+- Esta es string
+$b = "xyz";
+$c = 'xyz';
+
+
+-Esta es integer
+$d = 12;
+
+
+Los operadore:
+
+
+-Unarios:
+$d++
+
+
+-Binarios: 
+$d += 4, $f += 10
+
+
+-Ternarios
+$d = $a ?, ++$d : $d*3
+
+
+Funciones:
+- doble($i) – función definida por el usuario, parámetro por valor $i
+
+
+- gettype() – función incorporada, devuelve el tipo de una variable
+
+
+- is_int() – devuelve si una variable es de tipo entero
+
+
+- is_string() – devuelve si una variable es de tipo string
+
+
+Estructuras de control
+- if (is_int($d))
+
+
+- if (is_string($a))
+
+
+Salida por pantalla:
+        booleanstringstringinteger1xyzxyz184444
+
+
+2) Ejercicio 2
+
+
+1. Si son equivalentes
+2. Si son equivalentes
+3. Si son equivalentes
+
+
+3) Ejecicio 3
+1. Este código PHP incrustado en HTML genera una tabla vacía en una página web.
+2. Este genera un formulario HTML y procesa la edad ingresada por el usuario para determinar si es mayor o menor de edad, si tiene al menos 21 años.
+
+
+4)Ejercicio 4
+Produce las siguientes salidas
+
+        El  
+ El clavel blanco
+
+
+5)Ejercicio 5
+Lo que se ejecuta acá es un contador incremental de 1 en 1, se ve reflejado en el  archivo contador.dat.
+
+
+PHP: ARRAYS, FUNCIONES
+1)Ejercicio 1
+Ambos crean el mismo array asociativo más un valor numérico anónimo, son equivalentes.
+
+
+2) Ejercicio 2
+
+
+1. bar1
+2. 5942
+3. Nada
+
+
+3) Ejercicio 3
+
+
+1. Has entrado en esta pagina a las 14 horas, con 3 minutos y 15 
+segundos, del 8/5/2025
+2. 5+6=11
+
+
+4) Ejercicio 4
+Es un script para comprobar la longitud del nombre de usuario y los caracteres permitidos, que lo que este sea mayor a 3 y menor a 20.
+
+
+<?php
+function comprobar_nombre($nombre_usuario){
+    if (strlen($nombre_usuario) < 3 || strlen($nombre_usuario) > 20) {
+        echo $nombre_usuario . " no es válido<br>";
+        return false;
+    }
+
+
+    $permitidos = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_";
+    for ($i = 0; $i < strlen($nombre_usuario); $i++) {
+        if (strpos($permitidos, substr($nombre_usuario, $i, 1)) === false) {
+            echo $nombre_usuario . " no es válido <br> ";
+            return false;
+        }
+    }
+
+
+    echo $nombre_usuario . " es válido<br>";
+    return true;
+}
+
+
+// Pruebas:
+comprobar_nombre("Juan");          // Válido
+comprobar_nombre("jo");            // Muy corto
+comprobar_nombre("usuario!123");   // Contiene carácter no permitido
+comprobar_nombre("Nombre_Valido99"); // Válido
+comprobar_nombre("usuario-con-muchos-caracteres-que-no-deberia"); // Muy largo
+?>
